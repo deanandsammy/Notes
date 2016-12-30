@@ -29,7 +29,7 @@
 
 9. 不允许对只读属性赋值
 
-```javascript
+    ```javascript
     'use strict';
     
     var obj = {};
