@@ -29,13 +29,12 @@
 
 9. 不允许对只读属性赋值
 
-    ```javascript
+```javascript
     'use strict';
     
     var obj = {};
     
-    Object.defineProperty(obj, 'x', {value: 1, writable: false})；
-    obj.x = 2; // 报错
-    ```
-    
+    Object.defineProperty(obj, 'x', {value: 1, writable: false});
+    obj.x = 2; //报错
+    ```
 10. 不能删除一个不允许被删除的值
