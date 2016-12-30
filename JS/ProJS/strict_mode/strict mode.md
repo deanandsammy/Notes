@@ -6,4 +6,17 @@
 
 3. 八进制字面量在严格模式下是无效的，会导致支持该模式的JavaScript引擎抛出错误。
 
-4. 
+4. 严格模式下，无法使用 with 语句。
+
+    ```javascript
+    var obj = {};
+    
+    obj.a = 1;
+    obj.b = 2;
+    
+    with (obj) {
+        console.log(a + b); // 严格模式下会报错
+    }
+    ```
+    
+5. 
