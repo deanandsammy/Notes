@@ -33,8 +33,8 @@
     'use strict';
     
     var obj = {};
-    Object.defineProperty(obj, 'x', {value: 1, writable: false});
     
+    Object.defineProperty(obj, 'x', {value: 1, writable: false})；
     obj.x = 2; // 报错
     ```
     
