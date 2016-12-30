@@ -37,4 +37,5 @@
     Object.defineProperty(obj, 'x', {value: 1, writable: false});
     obj.x = 2; //报错
     ```
+    
 10. 不能删除一个不允许被删除的值
