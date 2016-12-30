@@ -39,3 +39,25 @@
     ```
     
 10. 不能删除一个不允许被删除的值
+
+    ```javascript
+    'use strict';
+    delete Object.prototype;
+    ```
+    
+11. 严格模式下，不能使用 eval 和 arguments 作为变量名
+
+12. 禁止 this 指向全局对象
+
+    ```javascript
+    function fun1() {
+        console.log(!this);
+    }
+    
+    fun1(); // false  this指向window对象
+    
+    function fun2() {
+        'use strict';
+        console.log(!this); // true 严格模式下，this被禁止指向 window 对象，返回undefined
+    }
+    ```
