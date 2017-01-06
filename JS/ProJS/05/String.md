@@ -118,3 +118,24 @@ var result = str.replace('Software Engineer', 'Superman');
 
 console.log(result); // 'I am a Superman'
 ```
+
+*replace()方法的第二个参数为函数时：*
+
+```javascript
+var str = 'fuck you! shit, go away!';
+var pattern = /fuck|shit/gi;
+
+function replaceValue(str) {
+    var result = '';
+
+    for (var i=0,len=str.length; i < len; i++) {
+        result += "*";
+    }
+
+    return result;
+}
+
+var result = str.replace(pattern, replaceValue);
+
+console.log(result); // '**** you! ****, go away!'
+```
