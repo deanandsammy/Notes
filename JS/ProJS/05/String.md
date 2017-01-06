@@ -82,3 +82,39 @@ function findStr(str) {
 
 console.log(findStr(str));
 ```
+
+###### 1.4.2 search()
+
+> search()方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。如果没有找到任何
+匹配的子字符串，则返回 -1
+
+语法：string.search(searchValue)
+
+参数 | 描述 | 返回值
+--- | --- | ---
+searchValue | 必须。要查找的字符串或正则表达式 | 检索成功返回起始位置，失败返回 -1
+
+```javascript
+var str = 'Software Engineer';
+
+console.log(str.search('ware')); // 4
+console.log(str.search(/soft/i)); // 0 执行了一次忽略大小写的检索
+```
+
+###### 1.4.3 replace()
+
+> replace()方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子字符串
+
+语法：string.replace(searchValue, newValue)
+
+参数 | 描述 | 返回值
+--- | --- | ---
+searchValue | 必需。字符串或正则 | 替换后的一个新的字符串
+newValue | 必须。字符串值。规定了替换文本或生成替换文本的函数
+
+```javascript
+var str = 'I am a Software Engineer';
+var result = str.replace('Software Engineer', 'Superman');
+
+console.log(result); // 'I am a Superman'
+```
