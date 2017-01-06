@@ -34,3 +34,51 @@ limit | 可选项。该参数指定返回数组的最大长度
 var str = 'hello';
 str.split(''); // ['h', 'e', 'l', 'l', 'o']
 ```
+
+#### 1.4 RegExp作为参数的方法
+
+###### 1.4.1 match()
+
+> match()方法在字符串内检索指定的值，找到一个或多个正则表达式的匹配 
+
+语法：string.match(regexp)
+
+参数 | 描述
+---|---
+regexp | 必须。如果参数不是RegExp对象，则需要首先把它传递给RegExp构造函数，将其转换为RegExp对象
+
+```javascript
+var str = 'h12h34ll56789o666';  // [12, 34, 56789, 666]
+
+// 方法一：常规方法
+function findStr(str) {
+    var arr = [];
+    var temp = '';
+    var test;
+
+    for (var i=0,len=str.length; i < len; i++) {
+        test = +str[i];
+        console.log(test);
+
+        if (test) {
+            temp += test;
+        } else {
+            temp && arr.push(temp);
+            temp = '';
+        }
+    }
+
+    temp && arr.push(temp);
+
+    return arr;
+}
+
+console.log(findStr(str));
+
+//方法二: 正则表达式
+function findStr(str) {
+    return str.match(/\d+/g);  
+}
+
+console.log(findStr(str));
+```
