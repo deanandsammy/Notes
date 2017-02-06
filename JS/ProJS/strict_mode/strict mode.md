@@ -49,6 +49,8 @@
 
 12. 禁止 this 指向全局对象
 
+> 在严格模式下，this将保持他进入执行环境时的值，所以下面的this将会默认为undefined
+
     ```javascript
     function fun1() {
         console.log(!this);
