@@ -100,8 +100,8 @@
     ```    
 
     使用 new 操作符调用构造函数时，如果我们不显式的返回一个引用类型值，其会隐式返回 this ，关于这种情况，可以查看[这篇文章]()。
-
-    ```JavaScript
+    
+        ```JavaScript
     function Flower() {
         this.petal = 4;
         this.countPetal = function () {
@@ -118,6 +118,5 @@
     
     var fn1 = new Flower();
     
-    fn1.countPetal();
+    fn1.countPetal(); // 鲜花盛开 12 朵
     ```    
- 
