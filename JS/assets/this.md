@@ -64,3 +64,60 @@
 
     console.log(obj.sayName()); // Huge  this指向没有发生变化
     ```
+
+    类似的，this 的绑定只受最靠近的对象引用的影响。
+
+    ```JavaScript
+    var external = {
+        name: 'Nicholas',
+        internal: {
+            name: 'Huge',
+            getName: function () {
+                return this.name;
+            }
+        }
+    }
+    
+    console.log(external.internal.getName());j // huge
+    ```
+    
+- 构造函数中的 this
+
+    > 当函数作为构造函数被使用时(使用 new)，它的 this 与即将被创建的新对象绑定
+
+    ```JavaScript
+    function Fn () {
+        this.name = "Huge";
+        this.job = "Software Engineer";
+        this.getJob = function () {
+            return this.job;
+        }
+    }
+    
+    var fn = new Fn();
+    
+    console.log(fn.getJob()); // Software Engineer
+    ```    
+
+    使用 new 操作符调用构造函数时，如果我们不显式的返回一个引用类型值，其会隐式返回 this ，关于这种情况，可以查看[这篇文章]()。
+
+    ```JavaScript
+    function Flower() {
+        this.petal = 4;
+        this.countPetal = function () {
+            console.log(this.petal);
+        };
+        
+        return {
+            petal: 12,
+            countPetal: function () {
+                console.log(this.petal);
+            }
+        };
+    }
+    
+    var fn1 = new Flower();
+    
+    fn1.countPetal();
+    ```    
+ 
