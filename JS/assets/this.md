@@ -80,7 +80,7 @@
     
     console.log(external.internal.getName());j // huge
     ```
-    
+
 - 构造函数中的 this
 
     > 当函数作为构造函数被使用时(使用 new)，它的 this 与即将被创建的新对象绑定
@@ -100,8 +100,8 @@
     ```    
 
     使用 new 操作符调用构造函数时，如果我们不显式的返回一个引用类型值，其会隐式返回 this ，关于这种情况，可以查看[这篇文章]()。
-    
-        ```JavaScript
+
+    ```JavaScript
     function Flower() {
         this.petal = 4;
         this.countPetal = function () {
