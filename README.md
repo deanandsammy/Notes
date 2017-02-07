@@ -1,2 +1,2 @@
 # Notes
-font-end notes
+JavaScript笔记，我想你会爱上她的
