@@ -120,3 +120,24 @@
     
     fn1.countPetal(); // 鲜花盛开 12 朵
     ```    
+
+- 函数参数中的 `this`
+
+```javascript
+let fruit = {
+    name: 'apple',
+    log (p) {
+        console.log(p)
+    }
+}
+
+let basket = {
+    name: 'orange',
+    putIn () {
+        fruit.log(this.name) // this = basket
+    }
+}
+
+basket.putIn() // 'orange'
+
+```
